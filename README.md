@@ -6,8 +6,6 @@
 
 **Opis programu:** Program wczytuje dane z wcześniej przygotowanego pliku lub generuje je na podstawie informacji podanych przez użytkownika. W tym drugim przypadku program prosi użytkownika o podanie liczby wejść (n=|X|) oraz liczbę stanów określonych (1 \&lt;= p \&lt;= 2^n). Układ jest opisany za pomocą macierzy binarnych X i Y (z niepełną określonością). Wczytany lub wygenerowany układ zostaje wypisany na ekran (lub do pliku), po czym program rozpoczyna syntezę UK(X,Y) na MUX 4:1 (k=2). Zostaje wybranych k zmiennych adresowych dla 2^L UK(X,Y) poziomu L. Następnie ustalane są kolejno wartości wszystkich kombinacji wartości k zmiennych adresowych, dla których zdekomponowany zostaje każdy UK(X,Y) poziomu L na 2^(L+1) UK(X,Y) poziomu L+1. Program sprawdza czy dany UK poziomu L+1 umożliwia bezpośrednie wyznaczenie kombinacyjnej zależności Y z X w postaci wartości stałej (0 lub 1) lub pojedynczej zmiennej prostej lub zanegowanej - jeżeli tak, to program przypisuje tę wartość/zmienną na odpowiednie wejście MUX, natomiast w przeciwnym wypadku, gdy jest możliwa przynajmniej jedna dalsza dekompozycja, kontynuuje ją w sposób rekurencyjny. Na koniec program wyprowadza rozwiązanie do pliku i/lub na ekran.
 
-**(Pseudokod na odwrocie kartki)**
-
 **Napotkane problemy: 1.** Reprezentacja macierzowa układu kombinacyjnego zapisana, za pomocą tablic w języku programowania c++ **2.** Określenie i wygenerowanie podanej ilości wejść wraz z różnymi stanami określonymi. **3.** Tworzenie podmacierzy (dla UK wyższego poziomu) oraz przekazywanie ich za pomocą funkcji rekurencyjnych **4.** Wypisanie na ekran i do pliku wyników dekompozycji na każdym poziomie wraz z odpowiednim oznaczeniem multiplekserów.
 
 **Przykładowy wynik programu:**
